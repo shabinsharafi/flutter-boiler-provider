@@ -1,8 +1,5 @@
-import 'dart:convert';
-
 import 'package:boiler_plate_app/api/api_response.dart';
 import 'package:boiler_plate_app/api/httpHandler.dart';
-import 'package:boiler_plate_app/logger.dart';
 import 'package:boiler_plate_app/models/LoginResponse.dart';
 import 'package:boiler_plate_app/models/userModel.dart';
 import 'package:boiler_plate_app/utilities.dart';

@@ -1,7 +1,6 @@
 
-import 'package:boiler_plate_app/styles/theme.dart';import 'package:flutter/cupertino.dart';
+import 'package:boiler_plate_app/styles/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 
 enum ButtonAlignment { start, end }

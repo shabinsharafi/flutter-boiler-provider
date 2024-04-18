@@ -1,15 +1,4 @@
-import 'dart:ffi';
-import 'dart:math';
-
-import 'package:boiler_plate_app/constants/constants.dart';
-import 'package:boiler_plate_app/styles/styles.dart';
-import 'package:boiler_plate_app/utils/NavigationService.dart';
-import 'package:boiler_plate_app/widgets/ShadowWidget.dart';
-import 'package:boiler_plate_app/widgets/nothing_layout.dart';
-import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
 
 import '../../provider/userProvider.dart';

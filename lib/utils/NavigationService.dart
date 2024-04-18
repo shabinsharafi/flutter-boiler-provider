@@ -1,5 +1,4 @@
 import 'package:boiler_plate_app/splashScreen.dart';
-import 'package:boiler_plate_app/utils/screen_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

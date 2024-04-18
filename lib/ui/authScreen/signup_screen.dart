@@ -1,6 +1,5 @@
-import 'package:boiler_plate_app/styles/styles.dart';
 import 'package:boiler_plate_app/provider/authVM.dart';
-import 'package:boiler_plate_app/ui/authScreen/loginScreen.dart';
+import 'package:boiler_plate_app/styles/styles.dart';
 import 'package:boiler_plate_app/utils/NavigationService.dart';
 import 'package:boiler_plate_app/utils/validations.dart';
 import 'package:boiler_plate_app/widgets/AnimatedButtonLoader.dart';

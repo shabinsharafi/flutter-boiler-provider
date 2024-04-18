@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:boiler_plate_app/widgets/shimmerWrap.dart';
+import 'package:flutter/material.dart';
 
 class NetworkImageShimmer extends StatelessWidget {
   double? width;

@@ -1,8 +1,5 @@
-import 'dart:ffi';
-
 import 'package:boiler_plate_app/styles/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import './PrimaryInputBackground.dart';
 

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:boiler_plate_app/styles/theme.dart';
+import 'package:flutter/material.dart';
 
 class PrimaryCircularIndicator extends StatelessWidget {
   @override

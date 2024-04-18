@@ -1,10 +1,5 @@
 import 'package:boiler_plate_app/styles/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:boiler_plate_app/styles/theme.dart';
-import 'package:boiler_plate_app/widgets/ArrowButton.dart';
-
-import 'GradientMask.dart';
 
 class ToolBar extends StatelessWidget implements PreferredSizeWidget {
   ToolBar(this.title, {this.action,this.onBackPressed,this.color,this.isLight=true, Key? key}) : super(key: key);

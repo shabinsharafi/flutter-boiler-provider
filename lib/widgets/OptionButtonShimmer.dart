@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:boiler_plate_app/styles/theme.dart';
+import 'package:flutter/cupertino.dart';
 
 class OptionButtonShimmer extends StatelessWidget {
   OptionButtonShimmer({this.width});

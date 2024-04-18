@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:boiler_plate_app/api/api_response.dart';
 import 'package:boiler_plate_app/logger.dart';
 import 'package:boiler_plate_app/models/baseModel.dart';

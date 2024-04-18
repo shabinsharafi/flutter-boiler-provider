@@ -1,11 +1,9 @@
 import 'dart:math';
 
+import 'package:boiler_plate_app/styles/theme.dart';
+import 'package:boiler_plate_app/widgets/OptionButtonShimmer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:boiler_plate_app/styles/theme.dart';
-import 'package:boiler_plate_app/widgets/HeadingUnderline.dart';
-import 'package:boiler_plate_app/widgets/OptionButton.dart';
-import 'package:boiler_plate_app/widgets/OptionButtonShimmer.dart';
 import 'package:shimmer/shimmer.dart';
 
 class CommonOptionsShimmer extends StatelessWidget {

@@ -1,8 +1,8 @@
+import 'package:boiler_plate_app/styles/theme.dart';
+import 'package:boiler_plate_app/widgets/GradientMask.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:boiler_plate_app/styles/theme.dart';
-import 'package:boiler_plate_app/widgets/GradientMask.dart';
 
 // ignore: must_be_immutable
 class ImageOptionButton extends StatefulWidget {

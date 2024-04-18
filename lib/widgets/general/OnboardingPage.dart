@@ -1,8 +1,6 @@
-import 'dart:ffi';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:boiler_plate_app/widgets/backgroundImageWidget.dart';
+import 'package:flutter/material.dart';
+
 import '../../styles/theme.dart';
 import '../HeadingUnderline.dart';
 

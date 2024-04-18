@@ -1,11 +1,8 @@
-import 'dart:math';
-
-import 'package:boiler_plate_app/styles/styles.dart';
 import 'package:boiler_plate_app/provider/authVM.dart';
+import 'package:boiler_plate_app/styles/styles.dart';
 import 'package:boiler_plate_app/widgets/AnimatedButtonLoader.dart';
 import 'package:boiler_plate_app/widgets/FormValidator.dart';
 import 'package:boiler_plate_app/widgets/PrimaryButton.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/style.dart';

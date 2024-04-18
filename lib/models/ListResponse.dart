@@ -2,8 +2,6 @@
 //
 //     final addItemFilter = addItemFilterFromJson(jsonString);
 
-import 'dart:convert';
-
 import 'package:boiler_plate_app/api/api_response.dart';
 import 'package:boiler_plate_app/models/baseModel.dart';
 

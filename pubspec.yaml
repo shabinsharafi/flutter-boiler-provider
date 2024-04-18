@@ -44,9 +44,7 @@ dependencies:
   carousel_slider: ^4.0.0
   shimmer: ^2.0.0
   cached_network_image: ^3.0.0
-  popup_menu: ^1.0.5
   jiffy: ^4.1.0
-  progress_indicator_button: ^0.0.3
   loader_overlay: ^2.0.2
   shared_preferences: ^2.0.8
   flutter_svg: ^1.1.6

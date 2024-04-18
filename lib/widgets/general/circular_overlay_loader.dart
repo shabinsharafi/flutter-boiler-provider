@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:boiler_plate_app/styles/theme.dart';
-import 'package:boiler_plate_app/widgets/general/primary_circular_indicator.dart';
+import 'package:flutter/material.dart';
 
 class CircularOverlayLoader{
   BuildContext context;

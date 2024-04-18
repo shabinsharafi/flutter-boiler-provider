@@ -1,7 +1,6 @@
 import 'package:boiler_plate_app/styles/styles.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:boiler_plate_app/styles/theme.dart';
+import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class OptionButton extends StatelessWidget {

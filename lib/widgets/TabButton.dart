@@ -1,5 +1,4 @@
 import 'package:boiler_plate_app/styles/theme.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TabButton extends StatelessWidget {

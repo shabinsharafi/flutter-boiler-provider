@@ -1,7 +1,5 @@
-import 'dart:ffi';
-
-import 'package:flutter/material.dart';
 import 'package:boiler_plate_app/styles/theme.dart';
+import 'package:flutter/material.dart';
 
 class DropDownWidget extends StatefulWidget {
   List<dynamic> items;

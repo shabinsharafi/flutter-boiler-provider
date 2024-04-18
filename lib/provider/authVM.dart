@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:boiler_plate_app/api/api_response.dart';
 import 'package:boiler_plate_app/api/userApi.dart';
 import 'package:boiler_plate_app/models/LoginResponse.dart';
-import 'package:boiler_plate_app/models/userModel.dart';
 import 'package:boiler_plate_app/ui/authScreen/loginScreen.dart';
 import 'package:boiler_plate_app/ui/authScreen/verify_otp_screen.dart';
 import 'package:boiler_plate_app/ui/home/mainHomeScreen.dart';

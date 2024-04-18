@@ -1,8 +1,7 @@
 
-import 'package:boiler_plate_app/styles/theme.dart';import 'package:boiler_plate_app/styles/styles.dart';
-import 'package:boiler_plate_app/utils/extension.dart';
+import 'package:boiler_plate_app/styles/styles.dart';
+import 'package:boiler_plate_app/styles/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 
 class PrimaryRadioButton extends StatelessWidget {

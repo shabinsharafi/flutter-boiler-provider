@@ -1,6 +1,6 @@
 
-import 'package:boiler_plate_app/styles/theme.dart';import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:boiler_plate_app/styles/theme.dart';
+import 'package:flutter/material.dart';
 
 
 class PrimarySwitchButton extends StatelessWidget {

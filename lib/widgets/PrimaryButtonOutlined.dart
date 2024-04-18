@@ -1,5 +1,6 @@
 
-import 'package:boiler_plate_app/styles/theme.dart';import 'package:boiler_plate_app/styles/styles.dart';
+import 'package:boiler_plate_app/styles/styles.dart';
+import 'package:boiler_plate_app/styles/theme.dart';
 import 'package:flutter/material.dart';
 
 

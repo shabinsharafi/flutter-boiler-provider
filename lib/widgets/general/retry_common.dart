@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:boiler_plate_app/styles/theme.dart';
 import 'package:boiler_plate_app/widgets/GradientMask.dart';
 import 'package:boiler_plate_app/widgets/PrimaryButton.dart';
+import 'package:flutter/material.dart';
 
 class RetryCommon extends StatefulWidget {
   VoidCallback onTap;

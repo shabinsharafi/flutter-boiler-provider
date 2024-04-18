@@ -1,16 +1,12 @@
 
+import 'package:boiler_plate_app/provider/userProvider.dart';
 import 'package:boiler_plate_app/styles/styles.dart';
-import 'package:boiler_plate_app/provider/authVM.dart';
 import 'package:boiler_plate_app/ui/common/state_screen.dart';
 import 'package:boiler_plate_app/ui/home/homeScreen.dart';
-import 'package:boiler_plate_app/provider/userProvider.dart';
 import 'package:boiler_plate_app/utilities.dart';
-import 'package:boiler_plate_app/utils/NavigationService.dart';
 import 'package:boiler_plate_app/widgets/imageAsset.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'home_screen.dart';
 
 class MainHomeScreen extends ScreenWidget {
   MainHomeScreen({Key? key}) : super(key: key);

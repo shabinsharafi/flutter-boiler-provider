@@ -2,9 +2,9 @@
 //
 //     final loginResponse = loginResponseFromJson(jsonString);
 
-import 'package:boiler_plate_app/models/userModel.dart';
-import 'package:meta/meta.dart';
 import 'dart:convert';
+
+import 'package:boiler_plate_app/models/userModel.dart';
 
 import 'baseModel.dart';
 
