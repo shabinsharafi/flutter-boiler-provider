@@ -1,0 +1,78 @@
+import 'package:boiler_plate_app/provider/authVM.dart';
+import 'package:boiler_plate_app/utils/NavigationService.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Provider.of<AuthenticationProvider>(
+            NavigationService.navigatorKey.currentContext!,
+            listen: false)
+        .init();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //backgroundColor:ThemeData().primaryColor,
+      body: Center(
+        child: Container(
+          child: Column(children: <Widget>[
+            Expanded(
+                flex: 1,
+                child: Consumer<AuthenticationProvider>(
+                    builder: (context, provider, child) {
+                  return Padding(
+                    padding: const EdgeInsets.all(36.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        SizedBox(
+                          height: 297.0,
+                          child: Image.asset(
+                            "assets/logo.png",
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        SizedBox(height: 15.0),
+                        Text(
+                          "App Name",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 19,
+                              fontWeight: FontWeight.w500),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 15.0),
+                        Text(
+                          "#random_text",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 35, 70, 116),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w300),
+                        ),
+                        SizedBox(height: 35.0),
+                        CircularProgressIndicator(
+                          strokeWidth: 1,
+                        ),
+                      ],
+                    ),
+                  );
+                })),
+          ]),
+        ),
+      ),
+    );
+  }
+
+}
