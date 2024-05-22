@@ -31,9 +31,9 @@ class Styles {
   static const SizedBox spaceWidth50 = SizedBox(width: 50);
 
   static InputDecoration inputForm(
-          {Color backgroundColor = Colors.white,
-          final double radius = 5,
-          final EdgeInsets? contentPadding}) =>
+      {Color backgroundColor = Colors.white,
+        final double radius = 5,
+        final EdgeInsets? contentPadding}) =>
       InputDecoration(
         filled: true,
         hintStyle: const TextStyle(color: Colors.grey),
@@ -109,7 +109,7 @@ class Styles {
         image: AssetImage("assets/logo.png"), fit: BoxFit.fill);
   }
 
-  List<BoxShadow>? buttonShadow({double blurRadius = 10, double offset = 2, double opacity = 0.28}) {
+  static List<BoxShadow>? buttonShadow({double blurRadius = 10, double offset = 2, double opacity = 0.28}) {
     return <BoxShadow>[
       BoxShadow(
         color: Color(0xFF4E5978).withOpacity(opacity-0.11),
@@ -159,17 +159,24 @@ class _Dimens {
 }
 
 class _Color {
-  final primaryColor = Utilities.getMaterialColor(Color(0xFFfa590b));
+  // final primaryColor = Utilities.getMaterialColor(Color(0xFF4285f4));
+  // final primaryColor = Utilities.getMaterialColor(Color(0xFF01579B));
+  // final primaryColor = Utilities.getMaterialColor(Color(0xFF234674));
+  final primaryColor = Utilities.getMaterialColor(Color(0xFF0277BD));
   final secondaryColor = Utilities.getMaterialColor(Color(0xFFf46ba3));
   final accentColor = Color.fromARGB(255, 241, 212, 80);
   final blueColor = Color.fromARGB(255, 35, 70, 116);
   final skyBlueColor = Color.fromARGB(255, 71, 194, 202);
   final redColor = Color.fromARGB(255, 230, 96, 101);
-  final textColor = Color(0xFF292929);
-  final textColorLight = Color(0xFF484848);
-  final textColorHint = Color(0xFFE2E2E2);
+  final textColor = Color(0xFF363636);
+  final textColorLight = Color(0xFF595959);
+  final textColorTooLight = Color(0xFF797979);
+  final textColorHint = Color(0xFF676767);
+  final dividerColor = Color(0xFF484848).withOpacity(0.4);
+  final textFieldColor = Color(0xFFF5F5F5);
+  final textFieldBorderColor = Color(0xFFDEDEDE);
   final fadedWhite = Color(0xFF9C9FA8);
-  final normalWhite = Color(0xFFFFFFFF);
+  final white = Color(0xFFFFFFFF);
   final primaryOrange = Color(0xFFE1953B);
   final fontColorOrange2 = Color(0xFFF1925C);
   final fontColorOrange = Color(0xFFD3663B);
@@ -183,19 +190,24 @@ class _Color {
   final backgroundGreyV2 = Color(0xFF1A2135);
   final backgroundGreyV3 = Color(0xFF2C3650);
   final backgroundBlack = Color(0xFF1A2135);
-  final profileCardBg = Color(0xFF141B30);
+  final profileCardBg = Color(0xFFFFFFFF);
   final boxBorder = Color(0xFF30394A);
-  final backGroundColor = Color.fromARGB(40, 255, 255, 255);
+  final backGroundColor = Color.fromARGB(255, 255, 255, 255);
 }
 
 class _TextStyle {
   final tooBigHeadingTS = TextStyle(
-      fontSize: 32,
+      fontSize: 30,
       fontWeight: FontWeight.w500,
       color: Styles.color.textColor,
       fontFamily: Styles.fontFamilyRegular);
+  final tooBigHeadingBoldTS = TextStyle(
+      fontSize: 30,
+      fontWeight: FontWeight.w600,
+      color: Styles.color.textColor,
+      fontFamily: Styles.fontFamilyRegular);
   final bigHeadingTS = TextStyle(
-      fontSize: 26,
+      fontSize: 24,
       fontWeight: FontWeight.w500,
       color: Styles.color.textColor,
       fontFamily: Styles.fontFamilyRegular);
@@ -210,22 +222,29 @@ class _TextStyle {
       color: Styles.color.textColor,
       fontFamily: Styles.fontFamilyRegular);
   final subHeadingTS = TextStyle(
-      fontSize: 16,
+      fontSize: 18,
       color: Styles.color.textColor,
+      fontWeight: FontWeight.w400,
       fontFamily: Styles.fontFamilyRegular);
-  final itemHeaderTS = TextStyle(
-      fontSize: 16,
-      color: Styles.color.textColor,
-      fontWeight: FontWeight.w500,
-      fontFamily: Styles.fontFamilyRegular);
-  final priceTS = TextStyle(
-      fontSize: 16,
+  final subHeadingBoldTS = TextStyle(
+      fontSize: 18,
       color: Styles.color.textColor,
       fontWeight: FontWeight.w600,
+      fontFamily: Styles.fontFamilyRegular);
+  final subHeadingSemiBoldTS = TextStyle(
+      fontSize: 18,
+      color: Styles.color.textColor,
+      fontWeight: FontWeight.w500,
       fontFamily: Styles.fontFamilyRegular);
   final regularTS = TextStyle(
       fontSize: 16,
       color: Styles.color.textColor,
+      fontWeight: FontWeight.w400,
+      fontFamily: Styles.fontFamilyRegular);
+  final regularSemiBoldTS = TextStyle(
+      fontSize: 16,
+      color: Styles.color.textColor,
+      fontWeight: FontWeight.w500,
       fontFamily: Styles.fontFamilyRegular);
   final regularBoldTS = TextStyle(
       fontSize: 16,
@@ -235,6 +254,7 @@ class _TextStyle {
   final normalTS = TextStyle(
       fontSize: 14,
       color: Styles.color.textColor,
+      fontWeight: FontWeight.w400,
       fontFamily: Styles.fontFamilyRegular);
   final normalBoldTS = TextStyle(
       fontSize: 14,
@@ -244,6 +264,7 @@ class _TextStyle {
   final smallTS = TextStyle(
       fontSize: 12,
       color: Styles.color.textColor,
+      fontWeight: FontWeight.w400,
       fontFamily: Styles.fontFamilyRegular);
   final smallBoldTS = TextStyle(
     fontSize: 12,

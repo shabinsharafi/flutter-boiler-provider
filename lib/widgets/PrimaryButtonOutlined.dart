@@ -27,15 +27,16 @@ class PrimaryButtonOutlined extends StatelessWidget {
         padding: EdgeInsets.only(top: paddingTop),
         child: Container(
           height: height,
-          width: width ?? MediaQuery.of(context).size.width,
+          width: width,
+          // width: width ?? MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.topRight,
                 colors: [
-                  color??Styles.color.primaryColor,
-                  color??Styles.color.primaryColor,
+                  color ?? Styles.color.primaryColor,
+                  color ?? Styles.color.primaryColor,
                 ],
               )),
           child: Container(
@@ -46,7 +47,6 @@ class PrimaryButtonOutlined extends StatelessWidget {
               elevation: 0,
               color: Colors.transparent,
               child: MaterialButton(
-                minWidth: 227,
                 materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 height: height,
                 padding: padding,

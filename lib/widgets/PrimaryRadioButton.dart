@@ -1,8 +1,5 @@
-
 import 'package:boiler_plate_app/styles/styles.dart';
-import 'package:boiler_plate_app/styles/theme.dart';
 import 'package:flutter/material.dart';
-
 
 class PrimaryRadioButton extends StatelessWidget {
   //final String text;
@@ -12,26 +9,40 @@ class PrimaryRadioButton extends StatelessWidget {
   final double borderRadius;
   final double height;
   final double fontSize;
+  final double iconGap;
+  final double iconSize;
   final String text;
   final bool selected;
   final bool showOr;
+  final TextStyle? textStyle;
   final EdgeInsets padding;
+  final Widget? selectedIcon;
+  final Widget? unSelectedIcon;
+  final IconData? selectedIconData;
+  final IconData? unSelectedIconData;
 
   PrimaryRadioButton(this.text,
       {required this.onSelected,
-      this.selected: false,
+      this.selected = false,
       this.width,
-      this.height: 50,
-      this.borderRadius: 10,
-      this.fontSize: 14,
-      this.showOr: false,
-      this.padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 7.0),
-      this.paddingTop: 10});
+      this.textStyle,
+      this.selectedIcon,
+      this.unSelectedIcon,
+      this.selectedIconData,
+      this.unSelectedIconData,
+      this.height = 35,
+      this.borderRadius = 10,
+      this.iconGap = 10,
+      this.fontSize = 14,
+      this.iconSize = 20,
+      this.showOr = false,
+      this.padding =
+          const EdgeInsets.symmetric(horizontal: 10.0, vertical: 7.0),
+      this.paddingTop = 0});
 
   @override
   Widget build(BuildContext context) {
-    width = width ??
-        MediaQuery.of(context).size.width - normalScreenPaddingSize * 2;
+    width = width;
     return Padding(
         padding: EdgeInsets.only(top: this.paddingTop),
         child: InkWell(
@@ -55,9 +66,20 @@ class PrimaryRadioButton extends StatelessWidget {
                 Row(
                   children: [
                     selected
-                        ?Icon(Icons.radio_button_on,color: Styles.color.primaryColor,):
-                    Icon(Icons.radio_button_off),
-                    SizedBox(width: 20,),
+                        ? selectedIcon ??
+                            Icon(
+                              selectedIconData ?? Icons.radio_button_on,
+                              color: Styles.color.primaryColor,
+                              size: iconSize,
+                            )
+                        : unSelectedIcon ??
+                            Icon(
+                              unSelectedIconData ?? Icons.radio_button_off,
+                              size: iconSize,
+                            ),
+                    SizedBox(
+                      width: iconGap,
+                    ),
                     Center(
                       child: Text(
                           /*(items[index] is MasterOption)
@@ -65,7 +87,7 @@ class PrimaryRadioButton extends StatelessWidget {
                                 :*/
                           text,
                           textAlign: TextAlign.center,
-                          style: Styles.textStyle.regularTS),
+                          style: textStyle ?? Styles.textStyle.normalTS),
                     ),
                   ],
                 ),

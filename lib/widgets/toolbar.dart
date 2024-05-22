@@ -2,63 +2,55 @@ import 'package:boiler_plate_app/styles/styles.dart';
 import 'package:flutter/material.dart';
 
 class ToolBar extends StatelessWidget implements PreferredSizeWidget {
-  ToolBar(this.title, {this.action,this.onBackPressed,this.color,this.isLight=true, Key? key}) : super(key: key);
+  ToolBar(this.title,
+      {this.action,
+      this.onBackPressed,
+      this.color,
+      this.isLight = true,
+      this.isCenter = false,
+      Key? key})
+      : super(key: key);
   String title;
   Color? color;
-  Widget? action;
+  List<Widget>? action;
   bool isLight;
+  bool isCenter;
   VoidCallback? onBackPressed;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color:color??Styles.color.primaryColor,
+      color: color ?? Styles.color.primaryColor,
       child: SafeArea(
         bottom: false,
         top: true,
-        child: Stack(
-          children: [
-            Container(
-              height: 60,
-              decoration: BoxDecoration(color: color??Styles.color.primaryColor),
-              child: Center(
-                child: SizedBox(
-                    width: MediaQuery.of(context).size.width / 1.5,
-                    child: Text(
-                      title,
-                      style: Styles.textStyle.headingTS
-                          .copyWith(color: isLight?Colors.white:Colors.black87),
-                      textAlign: TextAlign.center,
-                    )),
-              ),
-            ),
-            Positioned(
-              left: 20,
-              top: 0,
-              bottom: 0,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5.5),
-                child: InkWell(
-                  onTap: () {
-                    if(onBackPressed!=null) {
-                      onBackPressed!();
-                    } else {
-                      Navigator.pop(context);
-                    }
-                  },
-                  child: Icon(
-                    Icons.arrow_back_ios,
-                    color: isLight?Colors.white:Colors.black87,
-                  ),
+        child: Theme(
+          data: Theme.of(context).copyWith(useMaterial3: true),
+          child: AppBar(
+            centerTitle: isCenter,
+            title: Text(title,
+                style: Styles.textStyle.regularBoldTS.copyWith(
+                    color: isLight ? Colors.white : Styles.color.textColor)),
+            leading: Padding(
+              padding: EdgeInsets.only(left: Styles.dimens.screenPadding),
+              child: InkWell(
+                onTap: () {
+                  if (onBackPressed != null) {
+                    onBackPressed!();
+                  } else {
+                    Navigator.pop(context);
+                  }
+                },
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  size: 22,
+                  color: isLight ? Colors.white : Colors.black87,
                 ),
               ),
             ),
-            Positioned(
-                right: 0,
-                top: 0,
-                bottom: 0,
-                child: Center(child: action ?? SizedBox())),
-          ],
+            leadingWidth: 40,
+            actions: action,
+          ),
         ),
       ),
     );

@@ -696,14 +696,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.5"
-  popup_menu:
-    dependency: "direct main"
-    description:
-      name: popup_menu
-      sha256: "369558a99168499bab745c9d8520f45d126c05111e6a13de619e175ace76ebf7"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.5"
   process:
     dependency: transitive
     description:
@@ -712,14 +704,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.4"
-  progress_indicator_button:
-    dependency: "direct main"
-    description:
-      name: progress_indicator_button
-      sha256: "9a27be04853e9dded6d4db40b251327b3118a52010a7869dfc4f0aac472d54ee"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.3"
   provider:
     dependency: "direct main"
     description:
