@@ -27,6 +27,8 @@ class MyApp extends StatelessWidget {
         color: Colors.white,
         navigatorKey: NavigationService.navigatorKey,
         theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF1E1E1E)),
+          useMaterial3: true,
           fontFamily: 'ModernEra',
           primarySwatch: Styles.color.primaryColor,
         ),
