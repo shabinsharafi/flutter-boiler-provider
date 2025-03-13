@@ -25,11 +25,11 @@ class IconWithText extends StatelessWidget {
   IconWithText(
     this.text,
     this.iconUrl, {
-    this.width: DEFAULT_WIDTH,
-    this.paddingTop: DEFAULT_PADDING_TOP,
-    this.defaultTextColor: DEFAULT_NON_SELECTED_TEXT_COLOR,
-    this.defaultIconColor: DEFAULT_NON_SELECTED_ICON_COLOR,
-    this.selected: DEFAULT_IS_SELECTED,
+    this.width= DEFAULT_WIDTH,
+    this.paddingTop= DEFAULT_PADDING_TOP,
+    this.defaultTextColor= DEFAULT_NON_SELECTED_TEXT_COLOR,
+    this.defaultIconColor= DEFAULT_NON_SELECTED_ICON_COLOR,
+    this.selected= DEFAULT_IS_SELECTED,
   });
 
   @override

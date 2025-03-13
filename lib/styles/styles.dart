@@ -1,13 +1,12 @@
-import 'package:boiler_plate_app/utilities.dart';
-import 'package:boiler_plate_app/utils/NavigationService.dart';
-import 'package:dropdown_search/dropdown_search.dart';
+
 import 'package:flutter/material.dart';
+import '../utilities.dart';
+import '../utils/NavigationService.dart';
 
 class Styles {
   static _Dimens dimens = _Dimens();
   static _Color color = _Color();
   static _TextStyle textStyle = _TextStyle();
-
 
   static const normalScreenPadding = EdgeInsets.all(20);
 
@@ -32,12 +31,14 @@ class Styles {
 
   static InputDecoration inputForm(
       {Color backgroundColor = Colors.white,
-        final double radius = 5,
+        final double radius = 10,
+        String? hintText,
         final EdgeInsets? contentPadding}) =>
       InputDecoration(
         filled: true,
         hintStyle: const TextStyle(color: Colors.grey),
         fillColor: backgroundColor,
+        hintText: hintText,
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: Colors.grey.shade300, width: 1),
           borderRadius: BorderRadius.circular(radius),
@@ -58,7 +59,19 @@ class Styles {
         ),
       );
 
-  static dropDownDecoration(String hint, {double radius = 5}) =>
+  static InputDecoration inputFormD(
+      {Color backgroundColor = Colors.white,
+        final double radius = 5,
+        String? hintText,
+        final EdgeInsets? contentPadding}) =>
+      InputDecoration(
+          filled: true,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide.none,
+          ));
+
+ /* static dropDownDecoration(String hint, {double radius = 5}) =>
       DropDownDecoratorProps(
         dropdownSearchDecoration: InputDecoration(
             hintText: hint,
@@ -66,26 +79,26 @@ class Styles {
                 borderSide: BorderSide(color: Colors.grey.shade300, width: 1),
                 borderRadius: BorderRadius.circular(radius))),
       );
-
+*/
   //decorations
   static getTextFieldDecoration({String hint = ""}) {
     return InputDecoration(
-        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         hintText: hint,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
-          borderSide: BorderSide(color: Colors.grey, width: 2.0),
+          borderSide: const BorderSide(color: Colors.grey, width: 2.0),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
-          borderSide: BorderSide(
-              color: Color.fromARGB(0, 255, 255, 255),
+          borderSide: const BorderSide(
+              color: Colors.grey,
               width: 1.0,
               style: BorderStyle.solid),
         ),
-        hintStyle: TextStyle(color: Colors.grey),
+        hintStyle: const TextStyle(color: Colors.grey),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
-        fillColor: Color.fromARGB(30, 255, 255, 255),
+        fillColor: const Color.fromARGB(30, 255, 255, 255),
         filled: true);
   }
 
@@ -105,14 +118,15 @@ class Styles {
   }
 
   static getNoImageDecoration() {
-    return DecorationImage(
+    return const DecorationImage(
         image: AssetImage("assets/logo.png"), fit: BoxFit.fill);
   }
 
-  static List<BoxShadow>? buttonShadow({double blurRadius = 10, double offset = 2, double opacity = 0.28}) {
+  static List<BoxShadow>? buttonShadow(
+      {double blurRadius = 10, double offset = 2, double opacity = 0.28}) {
     return <BoxShadow>[
       BoxShadow(
-        color: Color(0xFF4E5978).withOpacity(opacity-0.11),
+        color: Color(0xFF4E5978).withOpacity(opacity - 0.11),
         blurRadius: blurRadius,
         offset: Offset(-offset, -offset),
       ),
@@ -130,10 +144,13 @@ class Styles {
 
 class _Dimens {
   get width =>
-      MediaQuery.of(NavigationService.navigatorKey.currentContext!).size.width;
+      MediaQuery.sizeOf(NavigationService.navigatorKey.currentContext!).width;
+
+  relativeWidth({double size = 1, double padding = 0}) =>
+      (width - (padding * (size - 1))) / size;
 
   get height =>
-      MediaQuery.of(NavigationService.navigatorKey.currentContext!).size.width;
+      MediaQuery.sizeOf(NavigationService.navigatorKey.currentContext!).width;
   final double buttonHeight = 50;
   final double screenPaddingBig = 25;
   final double screenPadding = 20;
@@ -152,18 +169,23 @@ class _Dimens {
   final fontSizeHeading = 24.0;
   final fontSizeLarge = 30.0;
   final fontSizeExtraLarge = 40.0;
-  final bannerRatio = 20/9;
-  final itemImageRatio = 3/4;
-  final itemDetailImageRatio = 4/5;
-
+  final bannerRatio = 20 / 9;
+  final itemImageRatio = 3 / 4;
+  final itemDetailImageRatio = 4 / 5;
 }
 
 class _Color {
   // final primaryColor = Utilities.getMaterialColor(Color(0xFF4285f4));
   // final primaryColor = Utilities.getMaterialColor(Color(0xFF01579B));
   // final primaryColor = Utilities.getMaterialColor(Color(0xFF234674));
-  final primaryColor = Utilities.getMaterialColor(Color(0xFF0277BD));
-  final secondaryColor = Utilities.getMaterialColor(Color(0xFFf46ba3));
+  // final primaryColor = Utilities.getMaterialColor(Color(0xFF91e405));
+  // final primaryColor = Utilities.getMaterialColor(Color(0xFF91e405));
+  // final primaryColor = Utilities.getMaterialColor(Color(0xFF28854c));
+  final primaryColor = Utilities.getMaterialColor(Color(0xFF35b261));
+
+  // final primaryColor = Utilities.getMaterialColor(Color(0xFF0277BD));
+  // final secondaryColor = Utilities.getMaterialColor(Color(0xFFD3663B));
+  final secondaryColor = Utilities.getMaterialColor(Color(0xFF28854c));
   final accentColor = Color.fromARGB(255, 241, 212, 80);
   final blueColor = Color.fromARGB(255, 35, 70, 116);
   final skyBlueColor = Color.fromARGB(255, 71, 194, 202);
@@ -190,6 +212,7 @@ class _Color {
   final backgroundGreyV2 = Color(0xFF1A2135);
   final backgroundGreyV3 = Color(0xFF2C3650);
   final backgroundBlack = Color(0xFF1A2135);
+  final black = Color(0xFF000000);
   final profileCardBg = Color(0xFFFFFFFF);
   final boxBorder = Color(0xFF30394A);
   final backGroundColor = Color.fromARGB(255, 255, 255, 255);
@@ -201,74 +224,67 @@ class _TextStyle {
       fontWeight: FontWeight.w500,
       color: Styles.color.textColor,
       fontFamily: Styles.fontFamilyRegular);
-  final tooBigHeadingBoldTS = TextStyle(
-      fontSize: 30,
-      fontWeight: FontWeight.w600,
-      color: Styles.color.textColor,
-      fontFamily: Styles.fontFamilyRegular);
   final bigHeadingTS = TextStyle(
-      fontSize: 24,
-      fontWeight: FontWeight.w500,
-      color: Styles.color.textColor,
-      fontFamily: Styles.fontFamilyRegular);
+    fontSize: 26,
+    fontWeight: FontWeight.w600,
+    color: Styles.color.textColor,
+    //fontFamily: Styles.fontFamilyRegular
+  );
   final headingTS = TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.w500,
-      color: Styles.color.textColor,
-      fontFamily: Styles.fontFamilyRegular);
-  final headingBoldTS = TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.w600,
-      color: Styles.color.textColor,
-      fontFamily: Styles.fontFamilyRegular);
+    fontSize: 20,
+    fontWeight: FontWeight.w500,
+    color: Styles.color.textColor,
+    //fontFamily: Styles.fontFamilyRegular
+  );
   final subHeadingTS = TextStyle(
-      fontSize: 18,
-      color: Styles.color.textColor,
-      fontWeight: FontWeight.w400,
-      fontFamily: Styles.fontFamilyRegular);
-  final subHeadingBoldTS = TextStyle(
-      fontSize: 18,
-      color: Styles.color.textColor,
-      fontWeight: FontWeight.w600,
-      fontFamily: Styles.fontFamilyRegular);
-  final subHeadingSemiBoldTS = TextStyle(
-      fontSize: 18,
-      color: Styles.color.textColor,
-      fontWeight: FontWeight.w500,
-      fontFamily: Styles.fontFamilyRegular);
+    fontSize: 18,
+    color: Styles.color.textColor,
+    //fontFamily: Styles.fontFamilyRegular
+  );
   final regularTS = TextStyle(
-      fontSize: 16,
-      color: Styles.color.textColor,
-      fontWeight: FontWeight.w400,
-      fontFamily: Styles.fontFamilyRegular);
-  final regularSemiBoldTS = TextStyle(
-      fontSize: 16,
-      color: Styles.color.textColor,
-      fontWeight: FontWeight.w500,
-      fontFamily: Styles.fontFamilyRegular);
-  final regularBoldTS = TextStyle(
-      fontSize: 16,
-      fontWeight: FontWeight.w600,
-      color: Styles.color.textColor,
-      fontFamily: Styles.fontFamilyRegular);
+    fontSize: 16,
+    color: Styles.color.textColor,
+    //fontFamily: Styles.fontFamilyRegular
+  );
   final normalTS = TextStyle(
-      fontSize: 14,
-      color: Styles.color.textColor,
-      fontWeight: FontWeight.w400,
-      fontFamily: Styles.fontFamilyRegular);
-  final normalBoldTS = TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w600,
-      color: Styles.color.textColor,
-      fontFamily: Styles.fontFamilyRegular);
+    fontSize: 14,
+    color: Styles.color.textColor,
+    //fontFamily: Styles.fontFamilyRegular
+  );
   final smallTS = TextStyle(
-      fontSize: 12,
-      color: Styles.color.textColor,
-      fontWeight: FontWeight.w400,
-      fontFamily: Styles.fontFamilyRegular);
-  final smallBoldTS = TextStyle(
     fontSize: 12,
     color: Styles.color.textColor,
-    fontWeight: FontWeight.w600,
+    //fontFamily: Styles.fontFamilyRegular
   );
+  final tooSmallTS = TextStyle(
+    fontSize: 10,
+    color: Styles.color.textColor,
+    //fontFamily: Styles.fontFamilyRegular
+  );
+}
+
+extension TextStyleExtension on TextStyle {
+  TextStyle extraBold() {
+    return copyWith(fontWeight: FontWeight.w800);
+  }
+
+  TextStyle get bold {
+    return copyWith(fontWeight: FontWeight.bold);
+  }
+
+  TextStyle get semiBold {
+    return copyWith(fontWeight: FontWeight.w600);
+  }
+
+  TextStyle get medium {
+    return copyWith(fontWeight: FontWeight.w500);
+  }
+
+  TextStyle get light {
+    return copyWith(fontWeight: FontWeight.w300);
+  }
+
+  TextStyle get thin {
+    return copyWith(fontWeight: FontWeight.w100);
+  }
 }

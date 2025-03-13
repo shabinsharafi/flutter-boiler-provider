@@ -19,9 +19,9 @@ class SettingsButton extends StatelessWidget {
       this.imageUrl = "",
       this.icon,
       this.iconWidget,
-      this.paddingTop: 10,
-      this.hideShadow: false,
-      this.alignment: ButtonAlignment.end}); // change this
+      this.paddingTop= 10,
+      this.hideShadow= false,
+      this.alignment= ButtonAlignment.end}); // change this
 
   @override
   Widget build(BuildContext context) {

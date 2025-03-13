@@ -12,7 +12,7 @@ class _DropdownInputState extends State<DropdownInput> {
   List items;
 
   _DropdownInputState(this.items,
-      {iconUrl: null, required this.hintText});
+      {iconUrl= null, required this.hintText});
 
   @override
   Widget build(BuildContext context) {

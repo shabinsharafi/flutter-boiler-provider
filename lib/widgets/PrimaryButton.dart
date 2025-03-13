@@ -76,7 +76,7 @@ class PrimaryButton extends StatelessWidget {
                         flex: 3,
                         child: Text(text,
                             //textAlign: TextAlign.center,
-                            style: Styles.textStyle.regularBoldTS.copyWith(
+                            style: Styles.textStyle.regularTS.bold.copyWith(
                               color: textColor ?? Colors.white,
                             )),
                       )
@@ -85,7 +85,7 @@ class PrimaryButton extends StatelessWidget {
                 }
                 return Text(text,
                     textAlign: TextAlign.center,
-                    style: Styles.textStyle.regularBoldTS.copyWith(
+                    style: Styles.textStyle.regularTS.bold.copyWith(
                       color: textColor ?? Colors.white,
                     ));
               }),

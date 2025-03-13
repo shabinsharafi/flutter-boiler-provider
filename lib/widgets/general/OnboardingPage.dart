@@ -56,7 +56,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
 class OnboardingPage extends StatefulWidget {
   final String title;
   final List<Widget> widgets;
-  const OnboardingPage({this.title: "", this.widgets: const []}); // change this
+  const OnboardingPage({this.title= "", this.widgets= const []}); // change this
 
   @override
   _OnboardingPageState createState() =>

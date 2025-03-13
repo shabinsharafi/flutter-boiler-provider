@@ -29,7 +29,7 @@ class ActionItems extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: Styles.textStyle.headingBoldTS
+                  style: Styles.textStyle.headingTS.bold
                       .copyWith(color: Styles.color.primaryColor),
                 ),
                 SizedBox(
@@ -38,7 +38,7 @@ class ActionItems extends StatelessWidget {
                 Text(
                   description.replaceFirst(" ", "\n"),
                   maxLines: 2,
-                  style: Styles.textStyle.regularSemiBoldTS,
+                  style: Styles.textStyle.regularTS.semiBold,
                 ),
               ],
             ),

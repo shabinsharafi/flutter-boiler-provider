@@ -29,7 +29,7 @@ class ToolBar extends StatelessWidget implements PreferredSizeWidget {
           child: AppBar(
             centerTitle: isCenter,
             title: Text(title,
-                style: Styles.textStyle.regularBoldTS.copyWith(
+                style: Styles.textStyle.regularTS.bold.copyWith(
                     color: isLight ? Colors.white : Styles.color.textColor)),
             leading: Padding(
               padding: EdgeInsets.only(left: Styles.dimens.screenPadding),

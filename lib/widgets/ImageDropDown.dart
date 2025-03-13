@@ -5,7 +5,7 @@ class ImageDropDown extends StatelessWidget {
   final VoidCallback function;
   final double width; // add this
   const ImageDropDown(this.text, this.function,
-      {this.width: 308}); // change this
+      {this.width= 308}); // change this
 
   @override
   Widget build(BuildContext context) {

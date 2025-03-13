@@ -39,4 +39,13 @@ extension DateExtension on DateTime {
   String toMMMDDYYYY() {
     return DateFormat("MMM dd, yyyy").format(this);
   }
+  String toEEEDDMMMYYYY() {
+    return DateFormat("EEEE dd MMM, yyyy").format(this);
+  }
+  String toHHmmMMMDDYYYY() {
+    return DateFormat("hh:mm a MMM dd, yyyy").format(this);
+  }
+  String toHHmm() {
+    return DateFormat("hh:mm a").format(this);
+  }
 }

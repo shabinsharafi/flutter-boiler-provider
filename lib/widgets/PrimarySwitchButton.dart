@@ -19,14 +19,14 @@ class PrimarySwitchButton extends StatelessWidget {
   PrimarySwitchButton(
       {required this.items,
       required this.onSelected,
-      this.selected: 0,
+      this.selected= 0,
       this.width,
-      this.height: 50,
-      this.borderRadius: 10,
-      this.fontSize: 14,
-      this.showOr: false,
-      this.padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 7.0),
-      this.paddingTop: 10});
+      this.height= 50,
+      this.borderRadius= 10,
+      this.fontSize= 14,
+      this.showOr= false,
+      this.padding= const EdgeInsets.symmetric(horizontal: 10.0, vertical: 7.0),
+      this.paddingTop= 10});
 
   int count = 0; // change this
   @override

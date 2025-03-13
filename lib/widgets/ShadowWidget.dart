@@ -26,8 +26,8 @@ class ShadowWidget extends StatelessWidget {
     this.color = Colors.white,
     this.radius = 0,
     this.shadowOptions,
-    this.hideShadow: false,
-    this.padding: const EdgeInsets.all(0),
+    this.hideShadow= false,
+    this.padding= const EdgeInsets.all(0),
   }); // change this
 
   @override

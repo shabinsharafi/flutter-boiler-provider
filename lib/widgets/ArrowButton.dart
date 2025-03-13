@@ -16,12 +16,12 @@ class ArrowButton extends StatelessWidget {
   final bool showButton;
 
   const ArrowButton(this.text, this.imageUrl, this.function,
-      {this.width: 308,
-      this.paddingTop: 10,
-      this.hideShadow: false,
+      {this.width= 308,
+      this.paddingTop= 10,
+      this.hideShadow= false,
       this.showButton = false,
-      this.margin: const EdgeInsets.all(0),
-      this.alignment: ButtonAlignment.end}); // change this
+      this.margin= const EdgeInsets.all(0),
+      this.alignment= ButtonAlignment.end}); // change this
 
   @override
   Widget build(BuildContext context) {

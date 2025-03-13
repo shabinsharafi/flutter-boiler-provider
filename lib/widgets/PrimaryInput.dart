@@ -37,7 +37,7 @@ class PrimaryInput extends StatelessWidget {
       this.onSubmitted,
       this.showSuffixIcon = false,
       this.suffixIcon = const Icon(Icons.chevron_right_sharp),
-      this.textInputType: TextInputType.text,
+      this.textInputType= TextInputType.text,
       this.inputFormatters,
       this.controller,
       this.validator,
@@ -62,7 +62,7 @@ class PrimaryInput extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 10),
               child: Text(
                 label!,
-                style: Styles.textStyle.smallBoldTS,
+                style: Styles.textStyle.smallTS.bold,
               ),
             ),
           TextFormField(

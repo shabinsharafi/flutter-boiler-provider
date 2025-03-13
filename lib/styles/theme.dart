@@ -147,7 +147,7 @@ var textStyleDropdownInputItem = TextStyle(
   color: Color(normalWhite),
 );
  errorStyle(var context)=>TextStyle(
-color: Theme.of(context).errorColor,
+color: Theme.of(context).colorScheme.error,
 fontSize: 12);
 
 

@@ -32,14 +32,14 @@ class TransparentButton extends StatelessWidget {
     this.text,
     this.iconUrl,
     this.onPressed, {
-    this.width: DEFAULT_WIDTH,
-    this.paddingTop: DEFAULT_PADDING_TOP,
-    this.defaultTextColor: DEFAULT_NON_SELECTED_TEXT_COLOR,
-    this.defaultIconColor: DEFAULT_NON_SELECTED_ICON_COLOR,
-    this.selectedIconColor: DEFAULT_SELECTED_ICON_COLOR,
-    this.selectedTextColor: DEFAULT_SELECTED_TEXT_COLOR,
-    this.selected: DEFAULT_IS_SELECTED,
-    this.value: DEFAULT_IS_SELECTED,
+    this.width= DEFAULT_WIDTH,
+    this.paddingTop= DEFAULT_PADDING_TOP,
+    this.defaultTextColor= DEFAULT_NON_SELECTED_TEXT_COLOR,
+    this.defaultIconColor= DEFAULT_NON_SELECTED_ICON_COLOR,
+    this.selectedIconColor= DEFAULT_SELECTED_ICON_COLOR,
+    this.selectedTextColor= DEFAULT_SELECTED_TEXT_COLOR,
+    this.selected= DEFAULT_IS_SELECTED,
+    this.value= DEFAULT_IS_SELECTED,
   });
 
   @override
